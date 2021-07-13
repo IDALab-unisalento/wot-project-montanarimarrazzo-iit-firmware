@@ -1,0 +1,17 @@
+# Copyright (c) 2019, Peter Bigot Consulting, LLC
+# SPDX-License-Identifier: Apache-2.0
+
+description: ADC channels configuration
+
+compatible: "gpio-adccs"
+
+child-binding:
+    description: ADC channel child node
+    properties:
+       channel:
+          type: int
+          required: true
+       label:
+          required: true
+          type: string
+          description: Human readable string describing the device (used by Zephyr for API name)
