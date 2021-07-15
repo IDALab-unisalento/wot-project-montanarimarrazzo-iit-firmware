@@ -1,0 +1,17 @@
+# Copyright (c) 2018, Linaro Limited
+# SPDX-License-Identifier: Apache-2.0
+
+description: GPIO controls parent node
+
+compatible: "gpio-ctrls"
+
+child-binding:
+    description: GPIO control child node
+    properties:
+       gpios:
+          type: phandle-array
+          required: true
+       label:
+          required: true
+          type: string
+          description: Human readable string describing the device (used by Zephyr for API name)
